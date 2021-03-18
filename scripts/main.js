@@ -15,6 +15,5 @@ function Book(title, author, pages, read) {
   }
 }
 
-function displayBook() {
-  
-}
+// const newbook = new Book('bible', 'jesus', '400', true);
+// myLibrary.push(newbook);
