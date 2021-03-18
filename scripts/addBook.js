@@ -7,6 +7,7 @@ function addBookToLibrary() {
   myLibrary.push(newBook);
   emptyContainer();
   createBookCard();
+  addBook()
 }
 
 console.log(myLibrary);
@@ -16,11 +17,11 @@ function emptyContainer() {
   booksContainer.innerHTML = ''
 }
 
-function addBook(event) { event.preventDefault(); if (myLibrary.some(({ book }) => book.title === titleInput.value)) { return; }}
 
 function createBookCard(){
   for (let i=0; i < myLibrary.length; i++) {
     const formCard = document.createElement('div');
+    formCard.setAttribute('data-id',i)
 
     const bookTitle = document.createElement('p');
     const bookAuthor = document.createElement('p');
@@ -34,6 +35,7 @@ function createBookCard(){
 
     const removeButton = document.createElement('button');
     removeButton.setAttribute('type', 'button');
+    removeButton.setAttribute('date-id', i)
     removeButton.innerText = 'Remove book';
 
     const readButton = document.createElement('button');

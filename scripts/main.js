@@ -15,5 +15,12 @@ function Book(title, author, pages, read) {
   }
 }
 
+const removeButton = document.addEventListener("click", (e) =>{e.target.dataset.id});
+function removeBook(t){
+  document.querySelectorAll('['[data-id=' + t + ]')
+  )
+}
+
+
 // const newbook = new Book('bible', 'jesus', '400', true);
 // myLibrary.push(newbook);
