@@ -11,15 +11,28 @@ console.log(myLibrary);
 
 function createbookcard(){
   const formCard = document.createElement('div');
-  const title = document.createElement('p');
-  const author = document.createElement('p');
-  const pages = document.createElement('p');
-  const read = document.createElement('p');
+  const bookTitle = document.createElement('p');
+  const bookAuthor = document.createElement('p');
+  const bookPages = document.createElement('p');
+  const bookRead = document.createElement('p');
+  const removeButton = document.createElement('button');
+  removeButton.setAttribute('type', 'button');
+  removeButton.innerText = 'Remove book';
+
+  const readButton = document.createElement('button');
+  readButton.setAttribute('type', 'button');
+  readButton.innerText = book.read ? 'Unread' : 'Read';
+
   const booksContainer = document.querySelector('#books-container');
   booksContainer.appendChild(formCard)
   formCard.appendChild(title)
   formCard.appendChild(author)
   formCard.appendChild(pages)
   formCard.appendChild(read)
+  formCard.appendChild(removeButton)
+  formCard.appendChild(readButton)
+
+
+
 
 }
