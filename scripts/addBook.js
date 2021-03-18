@@ -10,5 +10,16 @@ function addBookToLibrary() {
 console.log(myLibrary);
 
 function createbookcard(){
-  const formCard = document.createElement('div')
-  const title = document.createElement('h1')
+  const formCard = document.createElement('div');
+  const title = document.createElement('p');
+  const author = document.createElement('p');
+  const pages = document.createElement('p');
+  const read = document.createElement('p');
+  const booksContainer = document.querySelector('#books-container');
+  booksContainer.appendChild(formCard)
+  formCard.appendChild(title)
+  formCard.appendChild(author)
+  formCard.appendChild(pages)
+  formCard.appendChild(read)
+
+}
