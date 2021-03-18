@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const formToggler = document.getElementById('formToggler');
 const form = document.getElementById('form');
 const titleInput = document.getElementById('titleInput');
@@ -50,7 +51,15 @@ function createBookCard(book) {
   removeButton.addEventListener('click', removeBook);
   readButton.addEventListener('click', toggleReadStatus);
   /* eslint-enable no-use-before-define */
+=======
+function addBookToLibrary() {
+  title = document.getElementById('titleInput').value;
+  author = document.getElementById('authorInput').value;
+  pages = document.getElementById('pagesInput').value;
+  read = document.getElementById('readCheckbox').value;
+  const newBook = new Book(title, author, pages, read);
+  myLibrary.push(newBook);
+>>>>>>> 3ccd979b76bebea28981c54f6987259f3ba65f3c
 }
 
-addBookToLibrary();
 console.log(myLibrary);

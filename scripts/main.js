@@ -14,3 +14,7 @@ function Book(title, author, pages, read) {
     return(title + ' by ' + author + ', ' + pages + ' pages, ' + readyet);
   }
 }
+
+function displayBook() {
+  
+}
