@@ -2,7 +2,7 @@ function addBookToLibrary() {
   title = document.getElementById('titleInput').value;
   author = document.getElementById('authorInput').value;
   pages = document.getElementById('pagesInput').value;
-  read = document.getElementById('readCheckbox').value;
+  read = document.getElementById('readCheckbox').checked;
   const newBook = new Book(title, author, pages, read);
   myLibrary.push(newBook);
   emptyContainer();
@@ -34,11 +34,14 @@ function createBookCard(){
 
     const removeButton = document.createElement('button');
     removeButton.setAttribute('type', 'button');
+    removeButton.setAttribute('id', 'removebutton');
     removeButton.setAttribute('data-id', i)
     removeButton.innerText = 'Remove book';
 
     const readButton = document.createElement('button');
     readButton.setAttribute('type', 'button');
+    removeButton.setAttribute('id', 'readbutton');
+    removeButton.setAttribute('data-id', i)
     readButton.innerText = Book.read ? 'Unread' : 'Read';
 
     const booksContainer = document.querySelector('#books-container');

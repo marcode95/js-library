@@ -15,7 +15,10 @@ function Book(title, author, pages, read) {
   }
 }
 
-const removeButton = document.querySelector('#books-container');
+// const newbook = new Book('bible', 'jesus', '400', true);
+// myLibrary.push(newbook);
+
+const removeButton = document.getElementById('#removebutton');
 removeButton.addEventListener("click", (e) => {
   removeBook(e.target.dataset.id);
   emptyContainer();
@@ -25,7 +28,20 @@ removeButton.addEventListener("click", (e) => {
 function removeBook(id){
   myLibrary.splice(id, 1);
 }
+const readButton = document.getElementById('#readbutton');
+readButton.addEventListener("click", (e) => {
+  readCheck(e.target.dataset.id);
+  emptyContainer();
+  createBookCard();
+});
+
+function readCheck(id){
+  myLibrary[id].read
+  if (myLibrary[id].read === 'already read')
+    {myLibrary[id].read = 'not yet read'}
+      else {
+        myLibrary[id].read = 'already read'
+      }
+}
 
 
-// const newbook = new Book('bible', 'jesus', '400', true);
-// myLibrary.push(newbook);
