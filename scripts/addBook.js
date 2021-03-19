@@ -7,7 +7,6 @@ function addBookToLibrary() {
   myLibrary.push(newBook);
   emptyContainer();
   createBookCard();
-  addBook()
 }
 
 console.log(myLibrary);
@@ -35,7 +34,7 @@ function createBookCard(){
 
     const removeButton = document.createElement('button');
     removeButton.setAttribute('type', 'button');
-    removeButton.setAttribute('date-id', i)
+    removeButton.setAttribute('data-id', i)
     removeButton.innerText = 'Remove book';
 
     const readButton = document.createElement('button');

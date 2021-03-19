@@ -15,10 +15,15 @@ function Book(title, author, pages, read) {
   }
 }
 
-const removeButton = document.addEventListener("click", (e) =>{e.target.dataset.id});
-function removeBook(t){
-  document.querySelectorAll('['[data-id=' + t + ]')
-  )
+const removeButton = document.querySelector('#books-container');
+removeButton.addEventListener("click", (e) => {
+  removeBook(e.target.dataset.id);
+  emptyContainer();
+  createBookCard();
+});
+
+function removeBook(id){
+  myLibrary.splice(id, 1);
 }
 
 
