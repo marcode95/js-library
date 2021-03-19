@@ -40,8 +40,8 @@ function createBookCard(){
 
     const readButton = document.createElement('button');
     readButton.setAttribute('type', 'button');
-    removeButton.setAttribute('id', 'readbutton');
-    removeButton.setAttribute('data-id', i)
+    readButton.setAttribute('id', 'readbutton');
+    readButton.setAttribute('data-id', i)
     readButton.innerText = Book.read ? 'Unread' : 'Read';
 
     const booksContainer = document.querySelector('#books-container');
