@@ -10,41 +10,41 @@ function Book(title, author, pages, read) {
   }
 }
 
+function bookCard(i) {
+  const formCard = document.createElement('div');
+  formCard.setAttribute('data-id', i);
+
+  let bookTitle = document.createTextNode(myLibrary[i].title + ' by ');
+  let bookAuthor = document.createTextNode(myLibrary[i].author + ', ');
+  let bookPages = document.createTextNode(myLibrary[i].pages + ' pages, ');
+  let bookRead = document.createTextNode(myLibrary[i].read + '  ');
+
+  const removeButton = document.createElement('button');
+  removeButton.setAttribute('type', 'button');
+  removeButton.setAttribute('id', 'removebutton');
+  removeButton.innerText = 'Remove book';
+
+  const readButton = document.createElement('button');
+  readButton.setAttribute('type', 'button');
+  readButton.setAttribute('id', 'readbutton');
+  readButton.innerText = 'Read?';
+
+  const booksContainer = document.querySelector('#books-container');
+  booksContainer.appendChild(formCard);
+  formCard.appendChild(bookTitle);
+  formCard.appendChild(bookAuthor);
+  formCard.appendChild(bookPages);
+  formCard.appendChild(bookRead);
+  formCard.appendChild(removeButton);
+  formCard.appendChild(readButton);
+
+  removeButton.setAttribute('data-id', i);
+  readButton.setAttribute('data-id', i);
+}
+
 function createBookCard() {
   for (let i = 0; i < myLibrary.length; i += 1) {
-    const formCard = document.createElement('div');
-    formCard.setAttribute('data-id', i);
-
-    const bookTitle = document.createElement('p');
-    const bookAuthor = document.createElement('p');
-    const bookPages = document.createElement('p');
-    const bookRead = document.createElement('p');
-
-    bookTitle.textContent = myLibrary[i].title;
-    bookAuthor.textContent = myLibrary[i].author;
-    bookPages.textContent = myLibrary[i].pages;
-    bookRead.textContent = myLibrary[i].read;
-
-    const removeButton = document.createElement('button');
-    removeButton.setAttribute('type', 'button');
-    removeButton.setAttribute('id', 'removebutton');
-    removeButton.setAttribute('data-id', i);
-    removeButton.innerText = 'Remove book';
-
-    const readButton = document.createElement('button');
-    readButton.setAttribute('type', 'button');
-    readButton.setAttribute('id', 'readbutton');
-    readButton.setAttribute('data-id', i);
-    readButton.innerText = 'Read?';
-
-    const booksContainer = document.querySelector('#books-container');
-    booksContainer.appendChild(formCard);
-    formCard.appendChild(bookTitle);
-    formCard.appendChild(bookAuthor);
-    formCard.appendChild(bookPages);
-    formCard.appendChild(bookRead);
-    formCard.appendChild(removeButton);
-    formCard.appendChild(readButton);
+    bookCard(i);
   }
 }
 
