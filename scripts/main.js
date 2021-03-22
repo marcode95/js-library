@@ -97,3 +97,24 @@ booksContainer.addEventListener('click', (e) => {
     createBookCard();
   }
 });
+
+const formButton = document.querySelector('#form-buttons')
+const formSheet = document.querySelector('#form')
+const addBookButton = document.querySelector('#add-book')
+const closeFormButton = document.querySelector('#close-form')
+
+formButton.addEventListener('click', (e) => {
+  if (e.target && e.target.id === 'add-book') {
+    e.target.style.display = 'none';
+    formSheet.style.display = 'block';
+    closeFormButton.style.display = 'block';
+  }
+});
+
+formButton.addEventListener('click', (e) => {
+  if (e.target && e.target.id === 'close-form') {
+    e.target.style.display = 'none';
+    formSheet.style.display = 'none';
+    addBookButton.style.display = 'block';
+  }
+});
