@@ -98,10 +98,10 @@ booksContainer.addEventListener('click', (e) => {
   }
 });
 
-const formButton = document.querySelector('#form-buttons')
-const formSheet = document.querySelector('#form')
-const addBookButton = document.querySelector('#add-book')
-const closeFormButton = document.querySelector('#close-form')
+const formButton = document.querySelector('#form-buttons');
+const formSheet = document.querySelector('#form');
+const addBookButton = document.querySelector('#add-book');
+const closeFormButton = document.querySelector('#close-form');
 
 formButton.addEventListener('click', (e) => {
   if (e.target && e.target.id === 'add-book') {
